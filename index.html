@@ -1,22 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="image/summer-logo.jpg" type="image/x-icon" />
     <title>Summer Sale</title>
+    <!-- tailwind and daisyUI link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.8.3/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JS link -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-       
+  <body class="max-w-screen-xl mx-auto">
+    <header class="flex lg:flex-row flex-col-reverse items-center justify-around gap-10 mt-5">
+        <div class="space-y-8 text-center">
+            <h3 class="text-xl class="font-semibold"">---SALE FEVER---</h3>
+            <h1 class="lg:text-5xl text-3xl font-bold">
+                Purchase TK 200 or <br>
+                above & get <span class="text-[#E527B2]">20% off</span>
+            </h1>
+            <p class="font-semibold ">Use Promo Code : <span class="bg-[#E527B2] text-white px-5 py-2 rounded">SELL200</span></p>
+            
+        </div>
+        <div>
+            <img class="lg:w-[450px] w-[300px]" src="image/Summer 1.png" alt="">
+        </div>
     </header>
     <main>
         
     </main>
+    <script src="script/script.js"></script>
   </body>
 </html>
