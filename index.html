@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="image/summer-logo.jpg" type="image/x-icon" />
-    <title>Summer Sale</title>
+    <title>Summer-Sale</title>
     <!-- tailwind and daisyUI link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.8.3/dist/full.css"
@@ -57,9 +57,9 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title text-lg font-semibold">K. Accessories</h2>
-                <p>39.00 TK</p>
+                <p><span id="accessories1">39.00</span> TK</p>
                 <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button onclick="buyNowBtn()" class="btn btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
@@ -76,9 +76,9 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title text-lg font-semibold">K. Accessories</h2>
-                <p>25.00 TK</p>
+                <p> <span id="accessories2">25.00</span> TK</p>
                 <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button onclick="buyNowBtn2()"  class="btn btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
@@ -95,9 +95,9 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title text-lg font-semibold">Home Cooker</h2>
-                <p>49.00 TK</p>
+                <p><span id="home-maker">49.00</span> TK</p>
                 <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button onclick="buyNowBtn3()" class="btn btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
@@ -241,8 +241,8 @@
               </label>
             </div>
           </div>
-          <div id="dynamic-name">
-
+          <h2 class="font-semibold text-lg mt-4  text-green-500">--Item list--</h2>
+          <div id="dynamic-name" class="mt-1 font-semibold">
           </div>
           <div class="mt-8">
             <p class="font-semibold">Total price : <span id="total-price"></span>tk </p>
