@@ -33,9 +33,28 @@ function buyNowBtn6() {
   const catesPrice = getElementId("cates-price");
   addToCalEntry("Sports cates", catesPrice);
 }
+function buyNowBtn7() {
+  const chair = getElementId("chair");
+  addToCalEntry("Single Relax Chair", chair);
+}
+function buyNowBtn8() {
+  const childrenPlayer = getElementId("children-play");
+  addToCalEntry("Children play", childrenPlayer);
+}
+function buyNowBtn9() {
+  const sofa = getElementId("sofa");
+  addToCalEntry("Flexible Sofa", sofa);
+}
 
 const makePurchase = document.getElementById("make-purchase");
 makePurchase.disabled = true;
+
+const applyButton = document.getElementById("applyBtn");
+applyButton.disabled = true;
+
+// promo code
+const promoCode = document.getElementById("promo-code");
+const code = promoCode.innerText;
 
 function addToCalEntry(typeOfName, value) {
   const dynamicName = document.getElementById("dynamic-name");
@@ -54,13 +73,22 @@ function addToCalEntry(typeOfName, value) {
   }
 
   if (totalAmount >= 200) {
-    const discountTotalPrice = (totalAmount * (20 / 100)).toFixed(2);
-    const disElement = document.getElementById("discount");
-    const disElementString = disElement.innerText;
-    const disValue = parseFloat(disElementString);
-    disElement.innerText = discountTotalPrice;
-    const totalSum = (totalAmount - discountTotalPrice).toFixed(2);
-    const total = document.getElementById("total");
-    total.innerText = totalSum;
+    applyButton.disabled = false;
+    applyButton.addEventListener("click", function () {
+      const inputField = document.getElementById("input-field");
+      const inputValue = inputField.value;
+      inputField.value = "";
+
+      if (code === inputValue) {
+        const discountTotalPrice = (totalAmount * (20 / 100)).toFixed(2);
+        const disElement = document.getElementById("discount");
+        disElement.innerText = discountTotalPrice;
+        const totalSum = (totalAmount - discountTotalPrice).toFixed(2);
+        const total = document.getElementById("total");
+        total.innerText = totalSum;
+      } else {
+        alert("Please provide your valid promo-code");
+      }
+    });
   }
 }

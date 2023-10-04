@@ -29,7 +29,7 @@
                 Purchase TK 200 or <br>
                 above & get <span class="text-[#E527B2]">20% off</span>
             </h1>
-            <p class="font-semibold ">Use Promo Code : <span class="bg-[#E527B2] text-white px-5 py-2 rounded">SELL200</span></p>
+            <p class="font-semibold ">Use Promo Code : <span id="promo-code" class="bg-[#E527B2] text-white px-5 py-2 rounded">SELL200</span></p>
             
         </div>
         <div>
@@ -183,9 +183,9 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title text-lg font-semibold">Single Relax Chair</h2>
-                <p>185.00 TK</p>
+                <p><span id="chair">185.00</span> TK</p>
                 <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button onclick="buyNowBtn7()" class="btn btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
@@ -202,9 +202,9 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title text-lg font-semibold">Children play</h2>
-                <p>299.00 TK</p>
+                <p><span id="children-play">299.00</span> TK</p>
                 <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button onclick="buyNowBtn8()" class="btn btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
@@ -221,9 +221,9 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title text-lg font-semibold">Flexible Sofa</h2>
-                <p>339.00 TK</p>
+                <p><span id="sofa">339.00</span> TK</p>
                 <div class="card-actions">
-                  <button class="btn btn-primary">Buy Now</button>
+                  <button onclick="buyNowBtn9()" class="btn btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
@@ -236,8 +236,10 @@
             <h4 class="text-xl font-semibold">Have coupon?</h4>
             <div class="form-control mt-2">
               <label class="input-group">
-                <input type="text" placeholder="Coupon code" class="input input-bordered" />
-                <span class="bg-[#E527B2] text-white font-semibold">Apply</span>
+                <input id="input-field" type="text" placeholder="Coupon code" class="input input-bordered" />
+                <!-- <span id="applyBtn" class="bg-[#E527B2] text-white font-semibold">Apply</span> -->
+                <!-- <button id="applyBtn" class="bg-[#E527B2] text-white font-semibold px-2">Apply</button> -->
+                <button class="btn bg-[#E527B2] text-white font-semibold hover:text-black btn-success" id="applyBtn">Apply</button>
               </label>
             </div>
           </div>
@@ -257,6 +259,7 @@
                 <a href="/index.html"><button class="btn text-white bg-[#E527B2]">Go Home</button></a>
               </div>
             </dialog>
+            
           </div>
         </div>
        </div>
