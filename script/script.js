@@ -1,3 +1,4 @@
+
 // get innerText by Id parameter
 function getElementId(textId) {
   const element = document.getElementById(textId);
@@ -8,46 +9,49 @@ function getElementId(textId) {
 
 function buyNowBtn() {
   const accessories1 = getElementId("accessories1");
-  
-  addToCalEntry("K-Accessories",accessories1)
+
+  addToCalEntry("K-Accessories", accessories1);
 }
 
 function buyNowBtn2() {
   const accessories2 = getElementId("accessories2");
-  addToCalEntry("K-Accessories",accessories2)
-
+  addToCalEntry("K-Accessories", accessories2);
 }
 
 function buyNowBtn3() {
   const homeMaker = getElementId("home-maker");
-  addToCalEntry("Home Cooker",homeMaker)
-  
+  addToCalEntry("Home Cooker", homeMaker);
 }
 function buyNowBtn4() {
   const capPrice = getElementId("cap-price");
-  addToCalEntry("Sports Back Cap",capPrice)
-  
+  addToCalEntry("Sports Back Cap", capPrice);
 }
 function buyNowBtn5() {
   const jerseyPrice = getElementId("jersey-price");
-  addToCalEntry("Full Jersey Set",jerseyPrice)
-  
+  addToCalEntry("Full Jersey Set", jerseyPrice);
 }
 function buyNowBtn6() {
   const catesPrice = getElementId("cates-price");
-  addToCalEntry("Sports cates",catesPrice)
-  
+  addToCalEntry("Sports cates", catesPrice);
 }
 
-function addToCalEntry (typeOfName){
-        const dynamicName = document.getElementById('dynamic-name');
-        const count = dynamicName.childElementCount;
-        const p = document.createElement('p');
-        p.innerHTML = `${count+1}. ${typeOfName}`;
-        dynamicName.appendChild(p);  
+function addToCalEntry(typeOfName, value) {
+  const dynamicName = document.getElementById("dynamic-name");
+  const count = dynamicName.childElementCount;
+  const p = document.createElement("p");
+  p.innerHTML = `${count + 1}. ${typeOfName}`;
+  dynamicName.appendChild(p);
+//   get total price
+  const totalPrice = document.getElementById("total-price");
+  const prevPrice = totalPrice.innerText;
+  console.log(prevPrice,value);
+  totalPrice.innerText = parseFloat(prevPrice) + parseFloat(value);
+
 }
 
-
+function getTotalPrice() {
+  // const totalPrice = document.getElementById("total-price");
+}
 
 // const valueSpan = document.getElementById('value');
 // const addButton = document.getElementById('addButton');
@@ -56,4 +60,3 @@ function addToCalEntry (typeOfName){
 //     counter++;
 //     valueSpan.textContent = counter;
 // });
-
