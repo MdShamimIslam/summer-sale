@@ -37,10 +37,13 @@
         </div>
     </header>
     <main>
-        <!--Kitchenware section  -->
+       <div class="flex justify-center flex-col lg:flex-row gap-5">
+        <!-- card container -->
+        <div class="flex-1">
+           <!--Kitchenware section  -->
         <section class="mt-12">
           <h2 class="text-2xl text-center lg:text-start font-semibold">Kitchenware</h2>
-          <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 mt-4">
+          <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 mt-4">
             <div class="card bg-base-200 shadow-xl">
               <figure class="px-10 pt-10">
                 <img src="/image/prod1.png" alt="Shoes" class="rounded-xl" />
@@ -103,7 +106,7 @@
         <!-- Sportswear section -->
         <section class="mt-12">
           <h2 class="text-2xl text-center lg:text-start font-semibold">Sportswear</h2>
-          <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 mt-4">
+          <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 mt-4">
             <div class="card bg-base-200 shadow-xl">
               <figure class="px-10 pt-10">
                 <img src="/image/prod4.png" alt="Shoes" class="rounded-xl" />
@@ -166,7 +169,7 @@
         <!-- Furniture section -->
         <section class="my-12">
           <h2 class="text-2xl text-center lg:text-start font-semibold">Furniture</h2>
-          <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 mt-4">
+          <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 mt-4">
             <div class="card bg-base-200 shadow-xl">
               <figure class="px-10 pt-10">
                 <img src="/image/prod7.png" alt="Shoes" class="rounded-xl" />
@@ -226,6 +229,27 @@
             </div>
           </div>
         </section>
+        </div>
+        <!-- price container -->
+        <div class="w-[350px] bg-slate-100 h-[500px] p-5 rounded lg:mt-28 mx-auto">
+          <div class="">
+            <h4 class="text-xl font-semibold">Have coupon?</h4>
+            <div class="form-control mt-2">
+              <label class="input-group">
+                <input type="text" placeholder="Coupon code" class="input input-bordered" />
+                <span class="bg-[#E527B2] text-white font-semibold">Apply</span>
+              </label>
+            </div>
+          </div>
+          <div id="dynamic-name"></div>
+          <div class="mt-8">
+            <p class="font-semibold">Total price : <span id="total-price"></span>tk </p>
+            <p class="font-semibold">Discount : <span id="discount"></span>tk</p>
+            <p class="font-semibold">Total : <span id="total"></span>tk</p>
+            <button class="btn btn-success bg-[#E527B2] text-white w-full mt-4">Make Purchase</button>
+          </div>
+        </div>
+       </div>
     </main>
     <script src="script/script.js"></script>
   </body>
