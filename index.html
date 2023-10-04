@@ -248,7 +248,15 @@
             <p class="font-semibold">Total price : <span id="total-price">0</span> tk </p>
             <p class="font-semibold">Discount : <span id="discount">0</span> tk</p>
             <p class="font-semibold">Total : <span id="total">0</span> tk</p>
-            <button class="btn btn-success bg-[#E527B2] text-white w-full mt-4">Make Purchase</button>
+            <button onclick="my_modal_1.showModal()" id="make-purchase" class="btn btn-success bg-[#E527B2] text-white w-full mt-4">Make Purchase</button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box text-center">
+                <img class="w-[160px] mx-auto" src="image/congo.png" alt="">
+                <h3 class="font-bold text-4xl">Congratulations</h3>
+                <p class="py-4">Your Purchase the product</p>
+                <a href="/index.html"><button class="btn text-white bg-[#E527B2]">Go Home</button></a>
+              </div>
+            </dialog>
           </div>
         </div>
        </div>

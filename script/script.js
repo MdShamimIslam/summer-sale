@@ -1,4 +1,3 @@
-
 // get innerText by Id parameter
 function getElementId(textId) {
   const element = document.getElementById(textId);
@@ -35,28 +34,33 @@ function buyNowBtn6() {
   addToCalEntry("Sports cates", catesPrice);
 }
 
+const makePurchase = document.getElementById("make-purchase");
+makePurchase.disabled = true;
+
 function addToCalEntry(typeOfName, value) {
   const dynamicName = document.getElementById("dynamic-name");
   const count = dynamicName.childElementCount;
   const p = document.createElement("p");
   p.innerHTML = `${count + 1}. ${typeOfName}`;
   dynamicName.appendChild(p);
-//   get total price
+  //   get total price
   const totalPrice = document.getElementById("total-price");
   const prevPrice = totalPrice.innerText;
-  console.log(prevPrice,value);
-  totalPrice.innerText = parseFloat(prevPrice) + parseFloat(value);
+  const totalAmount = (parseFloat(prevPrice) + parseFloat(value)).toFixed(2);
+  totalPrice.innerText = totalAmount;
 
+  if (totalAmount > 0) {
+    makePurchase.disabled = false;
+  }
+
+  if (totalAmount >= 200) {
+    const discountTotalPrice = (totalAmount * (20 / 100)).toFixed(2);
+    const disElement = document.getElementById("discount");
+    const disElementString = disElement.innerText;
+    const disValue = parseFloat(disElementString);
+    disElement.innerText = discountTotalPrice;
+    const totalSum = (totalAmount - discountTotalPrice).toFixed(2);
+    const total = document.getElementById("total");
+    total.innerText = totalSum;
+  }
 }
-
-function getTotalPrice() {
-  // const totalPrice = document.getElementById("total-price");
-}
-
-// const valueSpan = document.getElementById('value');
-// const addButton = document.getElementById('addButton');
-// let counter = 0;
-// addButton.addEventListener('click', () => {
-//     counter++;
-//     valueSpan.textContent = counter;
-// });
